@@ -1,0 +1,121 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM Reader</title>
+    <style>
+      body {
+        width: 250px;
+        height: 500px;
+        font-family: Arial, sans-serif;
+        background: #24272a;
+        color: #ffffff;
+        padding: 45px 60px;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .box {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .label {
+        display: inline-block;
+        width: 100px;
+        font-size: 13px;
+        color: #bbc0c5;
+      }
+      .value {
+        display: inline-block;
+        width: 150px;
+        text-align: end;
+        font-size: 14px;
+      }
+      .title {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .btn-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      input {
+        width: 120px;
+        padding: 6px 12px;
+        background: rgb(24, 24, 24);
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(47, 47, 47);
+        border-radius: 6px;
+        color: white;
+        font-size: 16px;
+        line-height: 19px;
+      }
+      input:focus-visible{
+        outline: none;
+      }
+
+      .config-title {
+        margin-top: 36px;
+      }
+      .input-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .update-btn {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 12px 0px;
+        width: 100%;
+        height: 40px;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19px;
+        pointer-events: auto;
+        border: none;
+        outline-color: transparent;
+        outline-style: none;
+        cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background: rgb(171, 159, 242);
+        color: rgb(34, 34, 34);
+      }
+      .update-btn:hover{
+        background-color: rgb(131 118 212);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <div class="btn-container">
+      <div class="title config-title">설정</div>
+      <div class="input-wrapper">
+        <label for="p-total">개인 법카 한도</label>
+        <input type="text" id="p-total" />
+      </div>
+
+      <div class="input-wrapper">
+        <label for="t-total">팀비 법카 한도</label>
+        <input type="text" id="t-total" />
+      </div>
+
+      <button id="update-btn" class="update-btn">update</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
