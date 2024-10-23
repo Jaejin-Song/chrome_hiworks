@@ -378,9 +378,12 @@ function calculateBusinessDays() {
   let totalBusinessDays = 0;
   let remainingBusinessDays = 0;
 
-  const today = new Date();
-  const year = today.getUTCFullYear();
-  const month = today.getUTCMonth();
+  const _today = new Date();
+  const year = _today.getUTCFullYear();
+  const month = _today.getUTCMonth();
+  const day = _today.getUTCDate();
+
+  const today = new Date(Date.UTC(year, month, day));
 
   // Get the first and last day of the month in UTC
   const firstDay = new Date(Date.UTC(year, month, 1));
